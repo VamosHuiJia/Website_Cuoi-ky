@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+/* Wrapper bao bọc toàn bộ trang */
+.aboutus-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+/* Phần đầu (ảnh background) */
+.aboutus-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  margin-left: 100px;
+  color: white;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.explore-button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Albert Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.explore-button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Phần carousel sản phẩm */
+.carousel-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a3c34;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.carousel-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 400px; /* Kích thước cố định */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-text {
+  flex: 1;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bike-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.1;
+  height: 60px; /* Cố định chiều cao để tránh dịch chuyển */
+  display: flex;
+  align-items: center;
+}
+
+.bike-subtitle {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.bike-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.buy-now-button {
+  background-color: #66d3fa;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Albert Sans', sans-serif;
+  width: fit-content;
+}
+
+.buy-now-button:hover {
+  background-color: #4db8e0;
+}
+
+.carousel-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Danh mục ảnh nhỏ phía dưới */
+.carousel-small-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  position: relative;
+  width: 300px; /* Giới hạn chiều rộng để các ảnh nhỏ không bị dãn */
+}
+
+.small-image-item {
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.small-image-item.active {
+  opacity: 1;
+}
+
+.small-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-arrow {
+  left: -100px;
+}
+
+.right-arrow {
+  right: -100px;
+}

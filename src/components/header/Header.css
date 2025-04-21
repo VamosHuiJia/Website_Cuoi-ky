@@ -1,0 +1,64 @@
+/* src/components/Header.css */
+.header {
+    background-color: #1a2526; 
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; 
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    height: 40px; 
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu ul li {
+    display: inline;
+  }
+  
+  .nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu ul li a:hover {
+    color: #ccc; 
+  }
+  
+  .header-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 30px;
+  }
+  
+  .header-icons .icon {
+    height: 24px; 
+    cursor: pointer;
+  }
+  
+  .header-icons .icon:hover {
+    opacity: 0.8; 
+  }
